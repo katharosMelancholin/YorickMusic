@@ -11,6 +11,7 @@
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
+    <script src="{{ asset('js/MenuNav.js') }}"></script>
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -18,14 +19,33 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/menunav.css') }}" rel="stylesheet">
 </head>
 <body>
+
+<script>
+function openNav () {
+    document.getElementById("menunav").style.width = "350px";
+  document.getElementById("app").style.marginLeft = "350px";
+}
+
+function closeNav() {
+    document.getElementById("menunav").style.width = "0";
+  document.getElementById("app").style.marginLeft = "0";
+  }
+</script>
+
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
-                <a class="navbar-brand" href="{{ url('/') }}">
-                    MAIN PAGE
-                </a>
+            <div id="menunav" class="sidenav">
+            <p style="position: absolute left: 10px;
+            padding: 10px;" class="menutext">YORICK MUSIC MENU</p>
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav();">&times</a>
+            <a href="{{ url('/') }}"> MAIN</a>
+            </div>
+            <span style="position: absolute; left: 50px; 
+            font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -52,7 +72,7 @@
                             @endif
                         @else
                             <li class="nav-item dropdown">
-                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                <a id="navbarDropdown" style="color: red; font-family: Nunito; font-size: 18px;" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     {{ Auth::user()->name }} <span class="caret"></span>
                                 </a>
 

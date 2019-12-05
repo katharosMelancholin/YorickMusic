@@ -59,7 +59,7 @@
             }
 
             .m-b-md {
-                color: #ffada8;
+                color: #649ded;
                 margin-bottom: 30px;
             }
 
@@ -70,32 +70,56 @@
             }
 
             .logo-image {
-                position: absolute;
-                top: 5px;
-                left: 10px;
+                border: 3px solid black;
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
             }
 
+            .login-image {
+                right: 180px;
+                position: absolute;
+                padding: 0 95px;
+            }
+
+            .reg-image {
+                right: 55px;
+                position: absolute;
+                padding: 0 95px;
+            }
+            @font-face {
+                font-family: Grand; 
+                src: url(fonts/Grand.ttf);
+            }
         </style>
     </head>
     <body>
         <div class="flex-center position-ref full-height">
-            <img src="img/Logo.jpg" class="logo-image">
             @if (Route::has('login'))
                 <div class="top-right links">
+                
                     @auth
+                    <img src="img/home24px.png" class="home-image">
                     <a href="{{ url('/home') }}">
-                    <img src="img/home24px.png" class="home-image">Home</a>
+                    Home</a>
                     @else
-                        <a href="{{ route('login') }}">Login</a>
+                    
+                        <a href="{{ route('login') }}">
+                        <img src="img/log-in.png" class="login-image">Login</a>
 
                         @if (Route::has('register'))
-                            <a href="{{ route('register') }}">Register</a>
+                        
+                            <a href="{{ route('register') }}">
+                            <img src ="img/registration.png" class="reg-image">Register</a>
                         @endif
                     @endauth
+                    
                 </div>
             @endif
+            
             <div class="content">
                 <div class="title m-b-md">
+                <img src="img/MainPageLogo.jpg" class="logo-image">
                     YorickMusic
                 </div>
 
