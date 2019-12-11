@@ -88,35 +88,36 @@
                 padding: 0 95px;
             }
             @font-face {
-                font-family: Grand; 
+                font-family: Grand;
                 src: url(fonts/Grand.ttf);
             }
+
         </style>
     </head>
     <body>
         <div class="flex-center position-ref full-height">
             <?php if(Route::has('login')): ?>
                 <div class="top-right links">
-                
+
                     <?php if(auth()->guard()->check()): ?>
                     <img src="img/home24px.png" class="home-image">
                     <a href="<?php echo e(url('/home')); ?>">
                     Home</a>
                     <?php else: ?>
-                    
+
                         <a href="<?php echo e(route('login')); ?>">
                         <img src="img/log-in.png" class="login-image">Login</a>
 
                         <?php if(Route::has('register')): ?>
-                        
+
                             <a href="<?php echo e(route('register')); ?>">
                             <img src ="img/registration.png" class="reg-image">Register</a>
                         <?php endif; ?>
                     <?php endif; ?>
-                    
+
                 </div>
             <?php endif; ?>
-            
+
             <div class="content">
                 <div class="title m-b-md">
                 <img src="img/MainPageLogo.jpg" class="logo-image">
