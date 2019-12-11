@@ -20,6 +20,8 @@
     <!-- Styles -->
     <link href="<?php echo e(asset('css/app.css')); ?>" rel="stylesheet">
     <link href="<?php echo e(asset('css/menunav.css')); ?>" rel="stylesheet">
+    <link href="<?php echo e(asset('css/home.css')); ?>" rel="stylesheet">
+
 </head>
 <body>
 
@@ -40,11 +42,13 @@ function closeNav() {
             <div class="container">
             <div id="menunav" class="sidenav">
             <p style="position: absolute left: 10px;
-            padding: 10px;" class="menutext">YORICK MUSIC MENU</p>
+            padding: 10px;" id="logo-text">YORICK MUSIC</p>
             <a href="javascript:void(0)" class="closebtn" onclick="closeNav();">&times</a>
-            <a href="<?php echo e(url('/')); ?>"> MAIN</a>
+            <a href="<?php echo e(url('/')); ?>" class="menutext">MAIN</a>
+            <a href="<?php echo e(route('uploadmusic')); ?>" class="menutext">Add Music</a>
+            <a href="<?php echo e(url('home')); ?>" class="menutext">Home</a>
             </div>
-            <span style="position: absolute; left: 50px; 
+            <span style="position: absolute; left: 50px;
             font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="<?php echo e(__('Toggle navigation')); ?>">
                     <span class="navbar-toggler-icon"></span>
@@ -72,7 +76,7 @@ function closeNav() {
                             <?php endif; ?>
                         <?php else: ?>
                             <li class="nav-item dropdown">
-                                <a id="navbarDropdown" style="color: red; font-family: Nunito; font-size: 18px;" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                <a id="navbarDropdown" style="font-family: Nunito; font-size: 18px;" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     <?php echo e(Auth::user()->name); ?> <span class="caret"></span>
                                 </a>
 
@@ -80,8 +84,7 @@ function closeNav() {
                                     <a class="dropdown-item" href="<?php echo e(route('logout')); ?>"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
-                                        <?php echo e(__('Logout')); ?>
-
+                                        <?php echo e(__('Logout')); ?><br>
                                     </a>
 
                                     <form id="logout-form" action="<?php echo e(route('logout')); ?>" method="POST" style="display: none;">

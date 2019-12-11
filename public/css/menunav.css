@@ -1,5 +1,6 @@
 @import url(https://fonts.googleapis.com/css?family=Nunito);
-
+@import url('https://fonts.googleapis.com/css?family=Saira+Extra+Condensed&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Julius+Sans+One&display=swap');
 .sidenav {
     height: 100%;
     width: 0;
@@ -12,7 +13,7 @@
     transition: 0.5s;
     padding-top: 60px;
   }
-  
+
   .sidenav a {
     padding: 8px 8px 8px 32px;
     text-decoration: none;
@@ -21,11 +22,11 @@
     display: block;
     transition: 0.3s;
   }
-  
+
   .sidenav a:hover {
     color: #f1f1f1;
   }
-  
+
   .sidenav .closebtn {
     position: absolute;
     top: 0;
@@ -33,14 +34,14 @@
     font-size: 36px;
     margin-left: 50px;
   }
-  
+
   @media screen and (max-height: 450px) {
     .sidenav {padding-top: 15px;}
     .sidenav a {font-size: 18px;}
   }
 
   .menutext {
-    color: white;
-    font-size: 20px;
-    font-family: Nunito;
+    color: #ffffff;
+    font-size: 30px;
+    font-family: 'Julius Sans One';
   }

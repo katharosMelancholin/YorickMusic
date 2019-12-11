@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css?family=Noto+Sans&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Coda&display=swap');
 @import url('fonts/Grand.ttf');
+@import url('https://fonts.googleapis.com/css?family=Indie+Flower&display=swap');
 /*!
  * Bootstrap v4.4.1 (https://getbootstrap.com/)
  * Copyright 2011-2019 The Bootstrap Authors
@@ -44,6 +45,14 @@
   padding: 2px;
   margin: 2px;
 }
+
+#logo-text {
+  color: #ffffff;
+  font-family: Indie Flower;
+  font-size: 36px;
+  text-align: center;
+}
+
 
 *,
 *::before,
@@ -11366,4 +11375,3 @@ a.text-dark:focus {
     border-color: #dee2e6;
   }
 }
-

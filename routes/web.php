@@ -18,3 +18,16 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route:: get('/home', function () {
+  $MusicData = DB::table('music')->get();
+
+  return view('home', ['MusicData' => $MusicData]);
+});
+
+Route::post('submit','MusicDataController@store');
+
+Route::get('/upload', function() {
+  return view ('upl');
+})->name('uploadmusic');
+Route::post('/upload', 'MusicDataController@store')->name('submit');

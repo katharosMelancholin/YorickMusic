@@ -1,0 +1,58 @@
+@import url(href="https://fonts.googleapis.com/css?family=Nunito");
+@import url('https://fonts.googleapis.com/css?family=Ubuntu+Condensed&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Quicksand&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Caveat|PT+Sans+Narrow&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Varela+Round&display=swap');
+
+.table-container {
+  position: relative;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  top: 50px;
+}
+
+table {
+  font-family: Ubuntu Condensed;
+  margin-left: auto;
+  margin-right: auto;
+  align: center;
+}
+
+tr {
+
+  border-bottom: 1px solid #bfbfbf;
+}
+
+th {
+  margin: 10px;
+  padding: 0 90px;
+}
+
+.Songs {
+  border-spacing: 10px;
+}
+
+#column-data {
+  font-family: Quicksand;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.Quotes {
+  margin: 10px;
+  width: 430px;
+  display: block;
+  text-align: right;
+  float: right;
+}
+
+#QuoteText {
+font-size: 18px;
+font-family: Caveat;
+color: #c90000;
+}
+
+#AuthorText {
+font-family: Varela Round;
+}
