@@ -19,17 +19,13 @@ table {
   align: center;
 }
 
-tr {
-
-  border-bottom: 1px solid #bfbfbf;
-}
-
-th {
+.rows {
   margin: 10px;
   padding: 0 90px;
 }
 
 .Songs {
+  border-bottom: 1px solid #bfbfbf;
   border-spacing: 10px;
 }
 

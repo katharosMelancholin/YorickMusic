@@ -12,22 +12,23 @@ I'm going off the rails on a crazy train."</p>
 </div>
       <div class="table-container">
         <table>
-          <tr>
-            <th> #ID </th>
-            <th> TRACK </th>
-            <th> ARTIST </th>
-            <th> ALBUM </th>
-            <th> DURATION </th>
+          <tr id="trborder" class="w3-border-bottom">
+            <th class="rows"> #ID </th>
+            <th class="rows"> TRACK </th>
+            <th class="rows"> ARTIST </th>
+            <th class="rows"> ALBUM </th>
+            <th class="rows"> DURATION </th>
           </tr>
       <?php foreach ($MusicData as $key => $data): ?>
-        <tr class="Songs">
-          <th id="column-data"><?php echo e($data->id); ?></th>
-          <th id="column-data"><?php echo e($data->Name); ?></th>
-          <th id="column-data"><?php echo e($data->Artist); ?></th>
-          <th id="column-data"><?php echo e($data->Album); ?></th>
-          <th id="column-data"><?php echo e($data->Duration); ?></th>
+        <tr class="Songs" class="w3-border-bottom">
+          <th class="rows" id="column-data"><?php echo e($data->id); ?></th>
+          <th class="rows" id="column-data"><?php echo e($data->Name); ?></th>
+          <th class="rows" id="column-data"><?php echo e($data->Artist); ?></th>
+          <th class="rows" id="column-data"><?php echo e($data->Album); ?></th>
+          <th class="rows" id="column-data"><?php echo e($data->Duration); ?></th>
+        </tr>
       <?php endforeach; ?>
-      </div>
+</div>
 
 <?php $__env->stopSection(); ?>
 

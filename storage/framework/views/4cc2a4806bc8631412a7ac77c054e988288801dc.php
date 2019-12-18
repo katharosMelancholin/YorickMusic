@@ -21,6 +21,9 @@
     <link href="<?php echo e(asset('css/app.css')); ?>" rel="stylesheet">
     <link href="<?php echo e(asset('css/menunav.css')); ?>" rel="stylesheet">
     <link href="<?php echo e(asset('css/home.css')); ?>" rel="stylesheet">
+    <link href="<?php echo e(asset('css/playlists.css')); ?>" rel="stylesheet">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
 
 </head>
 <body>
@@ -46,7 +49,9 @@ function closeNav() {
             <a href="javascript:void(0)" class="closebtn" onclick="closeNav();">&times</a>
             <a href="<?php echo e(url('/')); ?>" class="menutext">MAIN</a>
             <a href="<?php echo e(route('uploadmusic')); ?>" class="menutext">Add Music</a>
-            <a href="<?php echo e(url('home')); ?>" class="menutext">Home</a>
+            <a href="<?php echo e(url('home')); ?>" class="menutext">Favorite Tracks</a>
+            <a href="<?php echo e(url('playlists')); ?>" class="menutext">Playlists</a>
+            <a href="" class="menutext">Albums</a>
             </div>
             <span style="position: absolute; left: 50px;
             font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>

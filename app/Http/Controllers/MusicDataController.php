@@ -24,7 +24,7 @@ class MusicDataController extends Controller
      */
     public function create()
     {
-        //
+        return view ('home.uploadmusic');
     }
 
     /**
@@ -41,8 +41,10 @@ class MusicDataController extends Controller
         $music->Name = $request->Name;
         $music->Artist = $request->Artist;
         $music->Album = $request->Album;
-
+        $music->isFavorite = $request->isFavorite;
         $music->save();
+
+        return redirect()->route('/home/upload');
     }
 
     /**

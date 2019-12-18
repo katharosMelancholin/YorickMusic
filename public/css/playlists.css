@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css?family=Girassol&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300&display=swap');
+
+.title-text {
+  text-align: center;
+  font-family: Girassol;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 100px;
+}
+
+.ptext {
+  padding: 4px;
+  font-size: 18px;
+  font-family: Open Sans Condensed;
+}
+
+.btext {
+  font-size: 22px;
+  font-family: Open Sans Condensed;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+.pcards {
+  display: inline-block;
+  padding: 15px;
+}
+
+.imgal {
+  display: block;
+  position: absolute;
+  left: 15px;
+}

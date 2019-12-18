@@ -20,14 +20,23 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route:: get('/home', function () {
-  $MusicData = DB::table('music')->get();
-
+  $MusicData = DB::select('select * from music where isFavorite = 1');
   return view('home', ['MusicData' => $MusicData]);
 });
+
+Route::get('/playlists', 'PlaylistsController@index')->name('playlists');
+Route::get('/playlists/create', 'PlaylistsController@create')->name('pcreate');
+Route::post('/playlistscreate', 'PlaylistsController@store');
+
 
 Route::post('submit','MusicDataController@store');
 
 Route::get('/upload', function() {
   return view ('upl');
 })->name('uploadmusic');
-Route::post('/upload', 'MusicDataController@store')->name('submit');
+
+Route::get('/home/upload', function() {
+  return view ('upl');
+});
+
+Route::get('/playlists/{id}', 'PlaylistsController@current');
