@@ -52,3 +52,12 @@ color: #c90000;
 #AuthorText {
 font-family: Varela Round;
 }
+
+.nbar {
+  padding: 10px;
+  background-color: #333;
+  overflow: hidden;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}

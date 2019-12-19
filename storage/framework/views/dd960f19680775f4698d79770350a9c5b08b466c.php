@@ -30,7 +30,7 @@ function btn(x) {
       <?php foreach ($MusicData as $key => $data): ?>
         <tr class="Songs" class="w3-border-bottom">
           <th class="rows" id="column-data">
-            <a href="<?php echo e($data->Music); ?>">
+            <a href="<?php echo e($data->Music); ?>" id="nowPlay">
                 <i class="fas fa-play" onclick="btn(this)"></i>
             </a>
           </th>
@@ -43,9 +43,11 @@ function btn(x) {
       <?php endforeach; ?>
 </div>
 
-<footer class="w3-container">
-  ss
-</footer>
+<div class="nbar">
+  <audio controls>
+    <source src="">
+  </audio>
+</div>
 
 <?php $__env->stopSection(); ?>
 

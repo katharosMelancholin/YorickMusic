@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\MusicData;
+use wapmorgan\MediaFile\MediaFile;
 
 class MusicDataController extends Controller
 {
@@ -37,13 +38,21 @@ class MusicDataController extends Controller
       $musicUrl = NULL;
     }
 
+    $media = MediaFile::open($musicName);
+
+    if($media->isAudio()) {
+      $audio= $media->getAudio();
+      $duration = $audio->getLength();
+    }
+
+
     $music->Music = $musicUrl;
     //WORKING WITH MUSIC DB
     $music->Name = $request->Name;
     $music->Artist = $request->Artist;
     $music->Album = $request->Album;
     $music->isFavorite = $request->isFavorite;
-    $music->Duration = request('dur');
+    $music->Duration = $duration;
 
     $music->save();
 

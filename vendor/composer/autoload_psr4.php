@@ -6,6 +6,10 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'wapmorgan\\Mp3Info\\' => array($vendorDir . '/wapmorgan/mp3info/src'),
+    'wapmorgan\\MediaFile\\' => array($vendorDir . '/wapmorgan/media-file/src'),
+    'wapmorgan\\FileTypeDetector\\' => array($vendorDir . '/wapmorgan/file-type-detector/src'),
+    'wapmorgan\\BinaryStream\\' => array($vendorDir . '/wapmorgan/binary-stream/src'),
     'phpDocumentor\\Reflection\\' => array($vendorDir . '/phpdocumentor/reflection-common/src', $vendorDir . '/phpdocumentor/reflection-docblock/src', $vendorDir . '/phpdocumentor/type-resolver/src'),
     'XdgBaseDir\\' => array($vendorDir . '/dnoegel/php-xdg-base-dir/src'),
     'Whoops\\' => array($vendorDir . '/filp/whoops/src/Whoops'),
@@ -65,4 +69,5 @@ return array(
     'Cron\\' => array($vendorDir . '/dragonmantank/cron-expression/src/Cron'),
     'Carbon\\' => array($vendorDir . '/nesbot/carbon/src/Carbon'),
     'App\\' => array($baseDir . '/app'),
+    'Acekyd\\LaravelMP3\\' => array($vendorDir . '/acekyd/laravelmp3/src'),
 );

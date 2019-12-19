@@ -27,6 +27,13 @@ class ComposerStaticInit29af3bdaa6bbb8722689f5d1302f9a09
     );
 
     public static $prefixLengthsPsr4 = array (
+        'w' => 
+        array (
+            'wapmorgan\\Mp3Info\\' => 18,
+            'wapmorgan\\MediaFile\\' => 20,
+            'wapmorgan\\FileTypeDetector\\' => 27,
+            'wapmorgan\\BinaryStream\\' => 23,
+        ),
         'p' => 
         array (
             'phpDocumentor\\Reflection\\' => 25,
@@ -139,10 +146,27 @@ class ComposerStaticInit29af3bdaa6bbb8722689f5d1302f9a09
         'A' => 
         array (
             'App\\' => 4,
+            'Acekyd\\LaravelMP3\\' => 18,
         ),
     );
 
     public static $prefixDirsPsr4 = array (
+        'wapmorgan\\Mp3Info\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/wapmorgan/mp3info/src',
+        ),
+        'wapmorgan\\MediaFile\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/wapmorgan/media-file/src',
+        ),
+        'wapmorgan\\FileTypeDetector\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/wapmorgan/file-type-detector/src',
+        ),
+        'wapmorgan\\BinaryStream\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/wapmorgan/binary-stream/src',
+        ),
         'phpDocumentor\\Reflection\\' => 
         array (
             0 => __DIR__ . '/..' . '/phpdocumentor/reflection-common/src',
@@ -381,6 +405,10 @@ class ComposerStaticInit29af3bdaa6bbb8722689f5d1302f9a09
         array (
             0 => __DIR__ . '/../..' . '/app',
         ),
+        'Acekyd\\LaravelMP3\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/acekyd/laravelmp3/src',
+        ),
     );
 
     public static $prefixesPsr0 = array (
@@ -412,8 +440,13 @@ class ComposerStaticInit29af3bdaa6bbb8722689f5d1302f9a09
     );
 
     public static $classMap = array (
+        'Acekyd\\LaravelMP3\\LaravelMP3' => __DIR__ . '/..' . '/acekyd/laravelmp3/src/LaravelMP3.php',
+        'Acekyd\\LaravelMP3\\LaravelMP3Facade' => __DIR__ . '/..' . '/acekyd/laravelmp3/src/LaravelMP3Facade.php',
+        'Acekyd\\LaravelMP3\\LaravelMP3ServiceProvider' => __DIR__ . '/..' . '/acekyd/laravelmp3/src/LaravelMP3ServiceProvider.php',
+        'App\\Album' => __DIR__ . '/../..' . '/app/Album.php',
         'App\\Console\\Kernel' => __DIR__ . '/../..' . '/app/Console/Kernel.php',
         'App\\Exceptions\\Handler' => __DIR__ . '/../..' . '/app/Exceptions/Handler.php',
+        'App\\Http\\Controllers\\AlbumsController' => __DIR__ . '/../..' . '/app/Http/Controllers/AlbumsController.php',
         'App\\Http\\Controllers\\Auth\\ConfirmPasswordController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/ConfirmPasswordController.php',
         'App\\Http\\Controllers\\Auth\\ForgotPasswordController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/ForgotPasswordController.php',
         'App\\Http\\Controllers\\Auth\\LoginController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/LoginController.php',
@@ -423,6 +456,7 @@ class ComposerStaticInit29af3bdaa6bbb8722689f5d1302f9a09
         'App\\Http\\Controllers\\Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller.php',
         'App\\Http\\Controllers\\HomeController' => __DIR__ . '/../..' . '/app/Http/Controllers/HomeController.php',
         'App\\Http\\Controllers\\MusicDataController' => __DIR__ . '/../..' . '/app/Http/Controllers/MusicDataController.php',
+        'App\\Http\\Controllers\\PlaylistsController' => __DIR__ . '/../..' . '/app/Http/Controllers/PlaylistsController.php',
         'App\\Http\\Kernel' => __DIR__ . '/../..' . '/app/Http/Kernel.php',
         'App\\Http\\Middleware\\Authenticate' => __DIR__ . '/../..' . '/app/Http/Middleware/Authenticate.php',
         'App\\Http\\Middleware\\CheckForMaintenanceMode' => __DIR__ . '/../..' . '/app/Http/Middleware/CheckForMaintenanceMode.php',
@@ -432,6 +466,7 @@ class ComposerStaticInit29af3bdaa6bbb8722689f5d1302f9a09
         'App\\Http\\Middleware\\TrustProxies' => __DIR__ . '/../..' . '/app/Http/Middleware/TrustProxies.php',
         'App\\Http\\Middleware\\VerifyCsrfToken' => __DIR__ . '/../..' . '/app/Http/Middleware/VerifyCsrfToken.php',
         'App\\MusicData' => __DIR__ . '/../..' . '/app/MusicData.php',
+        'App\\Playlist' => __DIR__ . '/../..' . '/app/Playlist.php',
         'App\\Providers\\AppServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AppServiceProvider.php',
         'App\\Providers\\AuthServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AuthServiceProvider.php',
         'App\\Providers\\BroadcastServiceProvider' => __DIR__ . '/../..' . '/app/Providers/BroadcastServiceProvider.php',
@@ -1177,6 +1212,7 @@ class ComposerStaticInit29af3bdaa6bbb8722689f5d1302f9a09
         'Faker\\ValidGenerator' => __DIR__ . '/..' . '/fzaninotto/faker/src/Faker/ValidGenerator.php',
         'Fideloper\\Proxy\\TrustProxies' => __DIR__ . '/..' . '/fideloper/proxy/src/TrustProxies.php',
         'Fideloper\\Proxy\\TrustedProxyServiceProvider' => __DIR__ . '/..' . '/fideloper/proxy/src/TrustedProxyServiceProvider.php',
+        'Flac' => __DIR__ . '/..' . '/bluemoehre/flac-php/flac.class.php',
         'Hamcrest\\Arrays\\IsArray' => __DIR__ . '/..' . '/hamcrest/hamcrest-php/hamcrest/Hamcrest/Arrays/IsArray.php',
         'Hamcrest\\Arrays\\IsArrayContaining' => __DIR__ . '/..' . '/hamcrest/hamcrest-php/hamcrest/Hamcrest/Arrays/IsArrayContaining.php',
         'Hamcrest\\Arrays\\IsArrayContainingInAnyOrder' => __DIR__ . '/..' . '/hamcrest/hamcrest-php/hamcrest/Hamcrest/Arrays/IsArrayContainingInAnyOrder.php',
@@ -4287,6 +4323,32 @@ class ComposerStaticInit29af3bdaa6bbb8722689f5d1302f9a09
         'phpDocumentor\\Reflection\\Types\\String_' => __DIR__ . '/..' . '/phpdocumentor/type-resolver/src/Types/String_.php',
         'phpDocumentor\\Reflection\\Types\\This' => __DIR__ . '/..' . '/phpdocumentor/type-resolver/src/Types/This.php',
         'phpDocumentor\\Reflection\\Types\\Void_' => __DIR__ . '/..' . '/phpdocumentor/type-resolver/src/Types/Void_.php',
+        'wapmorgan\\BinaryStream\\BinaryStream' => __DIR__ . '/..' . '/wapmorgan/binary-stream/src/BinaryStream.php',
+        'wapmorgan\\FileTypeDetector\\ContentStream' => __DIR__ . '/..' . '/wapmorgan/file-type-detector/src/ContentStream.php',
+        'wapmorgan\\FileTypeDetector\\Detector' => __DIR__ . '/..' . '/wapmorgan/file-type-detector/src/Detector.php',
+        'wapmorgan\\FileTypeDetector\\TerminalInfo' => __DIR__ . '/..' . '/wapmorgan/file-type-detector/src/TerminalInfo.php',
+        'wapmorgan\\MediaFile\\Adapters\\AacAdapter' => __DIR__ . '/..' . '/wapmorgan/media-file/src/Adapters/AacAdapter.php',
+        'wapmorgan\\MediaFile\\Adapters\\AmrAdapter' => __DIR__ . '/..' . '/wapmorgan/media-file/src/Adapters/AmrAdapter.php',
+        'wapmorgan\\MediaFile\\Adapters\\AsfAdapter' => __DIR__ . '/..' . '/wapmorgan/media-file/src/Adapters/AsfAdapter.php',
+        'wapmorgan\\MediaFile\\Adapters\\AviAdapter' => __DIR__ . '/..' . '/wapmorgan/media-file/src/Adapters/AviAdapter.php',
+        'wapmorgan\\MediaFile\\Adapters\\Containers\\MatroskaContainer' => __DIR__ . '/..' . '/wapmorgan/media-file/src/Adapters/Containers/MatroskaContainer.php',
+        'wapmorgan\\MediaFile\\Adapters\\FlacAdapter' => __DIR__ . '/..' . '/wapmorgan/media-file/src/Adapters/FlacAdapter.php',
+        'wapmorgan\\MediaFile\\Adapters\\MkvAdapter' => __DIR__ . '/..' . '/wapmorgan/media-file/src/Adapters/MkvAdapter.php',
+        'wapmorgan\\MediaFile\\Adapters\\Mp3Adapter' => __DIR__ . '/..' . '/wapmorgan/media-file/src/Adapters/Mp3Adapter.php',
+        'wapmorgan\\MediaFile\\Adapters\\Mp4Adapter' => __DIR__ . '/..' . '/wapmorgan/media-file/src/Adapters/Mp4Adapter.php',
+        'wapmorgan\\MediaFile\\Adapters\\Mpeg4Part12Adapter' => __DIR__ . '/..' . '/wapmorgan/media-file/src/Adapters/Mpeg4Part12Adapter.php',
+        'wapmorgan\\MediaFile\\Adapters\\OggAdapter' => __DIR__ . '/..' . '/wapmorgan/media-file/src/Adapters/OggAdapter.php',
+        'wapmorgan\\MediaFile\\Adapters\\WavAdapter' => __DIR__ . '/..' . '/wapmorgan/media-file/src/Adapters/WavAdapter.php',
+        'wapmorgan\\MediaFile\\Adapters\\WmaAdapter' => __DIR__ . '/..' . '/wapmorgan/media-file/src/Adapters/WmaAdapter.php',
+        'wapmorgan\\MediaFile\\Adapters\\WmvAdapter' => __DIR__ . '/..' . '/wapmorgan/media-file/src/Adapters/WmvAdapter.php',
+        'wapmorgan\\MediaFile\\AudioAdapter' => __DIR__ . '/..' . '/wapmorgan/media-file/src/AudioAdapter.php',
+        'wapmorgan\\MediaFile\\ContainerAdapter' => __DIR__ . '/..' . '/wapmorgan/media-file/src/ContainerAdapter.php',
+        'wapmorgan\\MediaFile\\Exceptions\\Exception' => __DIR__ . '/..' . '/wapmorgan/media-file/src/Exceptions/Exception.php',
+        'wapmorgan\\MediaFile\\Exceptions\\FileAccessException' => __DIR__ . '/..' . '/wapmorgan/media-file/src/Exceptions/FileAccessException.php',
+        'wapmorgan\\MediaFile\\Exceptions\\ParsingException' => __DIR__ . '/..' . '/wapmorgan/media-file/src/Exceptions/ParsingException.php',
+        'wapmorgan\\MediaFile\\MediaFile' => __DIR__ . '/..' . '/wapmorgan/media-file/src/MediaFile.php',
+        'wapmorgan\\MediaFile\\VideoAdapter' => __DIR__ . '/..' . '/wapmorgan/media-file/src/VideoAdapter.php',
+        'wapmorgan\\Mp3Info\\Mp3Info' => __DIR__ . '/..' . '/wapmorgan/mp3info/src/Mp3Info.php',
     );
 
     public static function getInitializer(ClassLoader $loader)
