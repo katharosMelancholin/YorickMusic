@@ -12,6 +12,7 @@
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
     <script src="{{ asset('js/MenuNav.js') }}"></script>
+    <script src="https://kit.fontawesome.com/096636172d.js" crossorigin="anonymous"></script>
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -44,14 +45,16 @@ function closeNav() {
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
             <div id="menunav" class="sidenav">
+            <a href="{{ url('/') }}">
             <p style="position: absolute left: 10px;
             padding: 10px;" id="logo-text">YORICK MUSIC</p>
+            </a>
             <a href="javascript:void(0)" class="closebtn" onclick="closeNav();">&times</a>
             <a href="{{ url('/') }}" class="menutext">MAIN</a>
-            <a href="{{route('uploadmusic')}}" class="menutext">Add Music</a>
+            <a href="{{ url('upload') }}" class="menutext">Add Music/Albums</a>
             <a href="{{url('home')}}" class="menutext">Favorite Tracks</a>
             <a href="{{url('playlists')}}" class="menutext">Playlists</a>
-            <a href="" class="menutext">Albums</a>
+            <a href="{{ url('albums') }}" class="menutext">Albums</a>
             </div>
             <span style="position: absolute; left: 50px;
             font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>

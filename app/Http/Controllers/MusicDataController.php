@@ -7,88 +7,47 @@ use App\MusicData;
 
 class MusicDataController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function index()
-    {
-        //
+  public function index() {
+    $upload = MusicData::all();
+
+    return view('upl', compact('upload'));
+  }
+
+  public function create() {
+    //
+  }
+
+  public function storeMusic(Request $request) {
+    $music = new MusicData;
+
+    $lastId = $music->id;
+    if(request()->hasFile('music')) {
+      $musicInfo = $request->file('music');
+
+      if(!$musicInfo->isValid()) {
+        return back()->with('error', $picInfo->getErrorMessage());
+      }
+
+      $musicName = $lastId.$musicInfo->getClientOriginalName();
+      $folder = 'pMusic/';
+
+      $musicInfo->move($folder, $musicName);
+      $musicUrl = $folder.$musicName;
+    } else {
+      $musicUrl = NULL;
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        return view ('home.uploadmusic');
-    }
+    $music->Music = $musicUrl;
+    //WORKING WITH MUSIC DB
+    $music->Name = $request->Name;
+    $music->Artist = $request->Artist;
+    $music->Album = $request->Album;
+    $music->isFavorite = $request->isFavorite;
+    $music->Duration = request('dur');
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
-    {
+    $music->save();
 
-        $music = new MusicData;
+    return redirect('/upload');
+  }
 
-        $music->Name = $request->Name;
-        $music->Artist = $request->Artist;
-        $music->Album = $request->Album;
-        $music->isFavorite = $request->isFavorite;
-        $music->save();
-
-        return redirect()->route('/home/upload');
-    }
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, $id)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
-    {
-        //
-    }
 }

@@ -9,10 +9,18 @@ Mental wounds not healing
 Life's a bitter shame
 I'm going off the rails on a crazy train."</p>
 <p id="AuthorText">Ozzy Osbourne</p>
+
+<script>
+function btn(x) {
+  x.classList.toggle("fas fa-pause");
+}
+</script>
+
 </div>
       <div class="table-container">
         <table>
           <tr id="trborder" class="w3-border-bottom">
+            <th class="rows"></th>
             <th class="rows"> #ID </th>
             <th class="rows"> TRACK </th>
             <th class="rows"> ARTIST </th>
@@ -21,6 +29,11 @@ I'm going off the rails on a crazy train."</p>
           </tr>
       <?php foreach ($MusicData as $key => $data): ?>
         <tr class="Songs" class="w3-border-bottom">
+          <th class="rows" id="column-data">
+            <a href="<?php echo e($data->Music); ?>">
+                <i class="fas fa-play" onclick="btn(this)"></i>
+            </a>
+          </th>
           <th class="rows" id="column-data"><?php echo e($data->id); ?></th>
           <th class="rows" id="column-data"><?php echo e($data->Name); ?></th>
           <th class="rows" id="column-data"><?php echo e($data->Artist); ?></th>
@@ -29,6 +42,10 @@ I'm going off the rails on a crazy train."</p>
         </tr>
       <?php endforeach; ?>
 </div>
+
+<footer class="w3-container">
+  ss
+</footer>
 
 <?php $__env->stopSection(); ?>
 

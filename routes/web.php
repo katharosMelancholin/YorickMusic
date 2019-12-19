@@ -40,3 +40,11 @@ Route::get('/home/upload', function() {
 });
 
 Route::get('/playlists/{id}', 'PlaylistsController@current');
+
+Route::get('/albums', 'AlbumsController@index')->name('albums');
+Route::get('/upload', 'MusicDataController@create')->name('acreate');
+Route::post('/uploadalbums', 'AlbumsController@storeAlbums');
+
+Route::get('/upload', 'MusicDataController@index')->name('upload');
+Route::get('/upload/create', 'MusicDataController@create')->name('ucreate');
+Route::post('/uploadmusic', 'MusicDataController@storeMusic');

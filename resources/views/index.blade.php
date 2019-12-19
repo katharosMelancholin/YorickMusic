@@ -8,8 +8,8 @@
       <?php foreach ($playlists as $playlist): ?>
         <div class="pcards">
             <div class="w3-card-4">
-              <a href="{{ url('/playlists', $playlist->id) }}">
-              <img src="{{ $playlist->Image }}"></img>
+              <a class="linkhover" href="{{ url('/playlists', $playlist->id) }}">
+              <img class="preview" src="{{ $playlist->Image }}"></img>
                 <div class="w3-container">
                   <p class="ptext">{{$playlist->Name}}</p>
               </a>

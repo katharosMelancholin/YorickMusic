@@ -21,16 +21,16 @@ table {
 
 .rows {
   margin: 10px;
-  padding: 0 90px;
+  padding: 0 60px;
 }
 
 .Songs {
   border-bottom: 1px solid #bfbfbf;
-  border-spacing: 10px;
+  border-spacing: 7px;
 }
 
 #column-data {
-  font-family: Quicksand;
+  font-family: Nunito;
   padding-top: 10px;
   padding-bottom: 10px;
 }

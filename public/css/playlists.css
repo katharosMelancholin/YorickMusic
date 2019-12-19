@@ -35,3 +35,27 @@ a:hover {
   position: absolute;
   left: 15px;
 }
+
+.preview {
+  width: 200px;
+  height: 200px;
+}
+
+.centered:hover {
+  position: absolute;
+  top:50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.linkhover:hover {
+  opacity: 30%;
+}
+
+.uploadtext {
+  text-align: center;
+  display: block;;
+  font-size: 25px;
+  font-family: Open Sans Condensed;
+  padding: 4px;
+}

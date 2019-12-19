@@ -17,11 +17,30 @@ class PlaylistsController extends Controller
       return view ('create');
     }
 
-    public function store() {
+    public function store(Request $request) {
       $playlist = new Playlist;
+      $lastId = $playlist->id;
 
       $playlist->Name = request('name');
-      $playlist->Image = request('Image');
+
+      //WORKING WITH IMAGES
+      if(request()->hasFile('pic')){
+      $picInfo = $request->file('pic');
+      if(!$picInfo->isValid()) {
+        return back()->with('error', $picInfo->getErrorMessage());
+      }
+      $picName = $lastId.$picInfo->getClientOriginalName();
+
+      $folder = 'pImage/';
+
+      $picInfo->move($folder, $picName);
+      $picUrl = $folder.$picName;
+    } else {
+      $picUrl = url('pImage/nopic.png');
+    }
+
+      $playlist->Image = $picUrl;
+
       $playlist->save();
       return redirect('/playlists');
     }
